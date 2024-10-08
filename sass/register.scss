@@ -1,0 +1,89 @@
+$font-mont: "Montserrat";
+$font-narow: "Archivo Narrow";
+//font-size text
+$fs-default: 13px;
+
+$mobile-width: 576px;
+$tablet-width: 992px;
+$desktop-width: 1200px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile -width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin styleText($color, $fs, $fw: 400, $font: $font-mont) {
+  color: $color;
+  font-size: $fs;
+  font-weight: $fw;
+  font-family: $font, sans-serif;
+}
+
+@mixin sectionMargin($mt: 60px) {
+  margin-top: $mt;
+}
+
+@mixin styleBtn(
+  $color,
+  $bg_color,
+  $hoverColor,
+  $hoverBgColor,
+  $py: 15px,
+  $px: 30px
+) {
+  padding: $py $px;
+  font-family: $font-narow, sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: $color;
+  background-color: $bg-color;
+  border: 1px solid transparent;
+  border-radius: 60px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  &:hover {
+    color: $hoverColor;
+    background-color: $hoverBgColor;
+  }
+}
+
+.register {
+  .register_content {
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include tablet() {
+      padding: 40px 80px;
+    }
+    span {
+      @include styleText(#dc3545, 16px);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .submit_btn {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      button {
+        display: flex;
+        @include styleBtn(#fff, #2ac37d, #fff, #50cf96, 15px, 50px);
+      }
+    }
+  }
+}

@@ -75,7 +75,7 @@
             </div>
             <div class="col-12 col-lg-6 col-md-12 col-sm-6">
               <div class="header_actions">
-                <a href="#">Login & regiser</a>
+                <a href="./../register/">Login & regiser</a>
               </div>
             </div>
           </div>
@@ -128,6 +128,12 @@
               ><strong>FREE DELIVERY</strong>: Get free standard
             </span>
           </div>
+          <div class="carousel-item">
+            <i class="fa fa-truck" style="color: green; font-size: 24px"></i>
+            <span class="services_content"
+              ><strong>FREE DELIVERY</strong>: Get free standard
+            </span>
+          </div>
         </div>
       </div>
     </header>
@@ -141,7 +147,7 @@
             <img src="./../src/3.jpg" alt="" />
           </div>
           <div class="col-xl-7 detail_center order-0 order-xl-1">
-            <img src="./../src/1.jpg" alt="" />
+            <img id="product_image" src="./../src/1.jpg" alt="" />
           </div>
           <div class="col-xl-4 detail_right order-2">
             <div class="detail_rating row">
@@ -155,12 +161,14 @@
               <div class="col-6 d-flex justify-content-end">
                 <a href="#">(Read all 8 reviews)</a>
               </div>
-              <h2>Air strong training</h2>
+              <h2 id="product_name">Air strong training</h2>
               <p class="product_category">Men shoes,Nike,Jordan</p>
-              <h3 class="product_price">£ 115 <del>£ 330</del></h3>
+              <h3 class="product_price">
+                £ <span id="product_price">115</span> <del>£ 330</del>
+              </h3>
               <div class="product_block">
                 <h4>Quick Review</h4>
-                <p>
+                <p id="product_description">
                   The Nike Free RN 2017 Men's Running Shoe weighs less than
                   previous versions and features an updated knit material…
                 </p>
@@ -191,6 +199,7 @@
                   <select
                     class="form-select product_select"
                     aria-label="Default select example"
+                    id="product_size"
                   >
                     <option selected>Select size</option>
                     <option value="4">4</option>
@@ -316,7 +325,12 @@
               aria-labelledby="profile-tab"
               tabindex="0"
             >
-              <p class="">1 review for <strong>Shoes Air Jordan</strong></p>
+              <p class="">
+                1 review for
+                <strong id="review_name" class="text-capitalize"
+                  >Shoes Air Jordan</strong
+                >
+              </p>
               <div class="container-fluid user_review">
                 <div class="row">
                   <div class="col-2 user_avatar">
@@ -401,100 +415,7 @@
             </div>
           </div>
         </div>
-        <div class="list_item">
-          <div class="wrapper_shoe">
-            <div class="shoe_thumbnail">
-              <img class="img-fluid" src="./../src/2.jpg" alt="" />
-            </div>
-            <div class="shoe_content">
-              <div class="list_shoe">
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/2.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/3.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="d-flex w-100 justify-content-between">
-                <div class="d-flex flex-column">
-                  <a href="#">Air Jordan 7 Retro</a>
-                  <p>Men shoes, Nike, Jordan</p>
-                </div>
-
-                <div class="shoe_price">
-                  <span>£ 120</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wrapper_shoe">
-            <div class="shoe_thumbnail">
-              <img class="img-fluid" src="./../src/2.jpg" alt="" />
-            </div>
-            <div class="shoe_content">
-              <div class="list_shoe">
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/2.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/3.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="d-flex w-100 justify-content-between">
-                <div class="d-flex flex-column">
-                  <a href="#">Air Jordan 7 Retro</a>
-                  <p>Men shoes, Nike, Jordan</p>
-                </div>
-
-                <div class="shoe_price">
-                  <span>£ 120</span>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="wrapper_shoe">
-            <div class="shoe_thumbnail">
-              <img class="img-fluid" src="./../src/2.jpg" alt="" />
-            </div>
-            <div class="shoe_content">
-              <div class="list_shoe">
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/2.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/3.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
-                </div>
-              </div>
-              <div class="d-flex w-100 justify-content-between">
-                <div class="d-flex flex-column">
-                  <a href="#">Air Jordan 7 Retro</a>
-                  <p>Men shoes, Nike, Jordan</p>
-                </div>
-
-                <div class="shoe_price">
-                  <span>£ 120</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="list_item" id="related_List">
           <div class="wrapper_shoe">
             <div class="shoe_thumbnail">
               <img class="img-fluid" src="./../src/2.jpg" alt="" />
@@ -692,5 +613,6 @@
       });
     </script>
     <script src="./../js/main.js"></script>
+    <script src="./../js/detail.js"></script>
   </body>
 </html>

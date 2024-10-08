@@ -865,6 +865,17 @@ footer {
   background-size: cover;
   position: relative;
   z-index: 0;
+  text-align: center;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  footer {
+    text-align: left;
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    text-align: left;
+  }
 }
 footer::before {
   content: "";

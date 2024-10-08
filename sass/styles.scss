@@ -849,6 +849,13 @@ footer {
   background-size: cover;
   position: relative;
   z-index: 0;
+  text-align: center;
+  @include tablet() {
+    text-align: left;
+  }
+  @include desktop() {
+    text-align: left;
+  }
   &::before {
     content: "";
     position: absolute;

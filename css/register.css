@@ -1,0 +1,43 @@
+.register .register_content {
+  padding: 40px 20px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .register .register_content {
+    padding: 40px 80px;
+  }
+}
+.register .register_content span {
+  color: #dc3545;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+.register .register_content h1 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.register .register_content .submit_btn {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.register .register_content .submit_btn button {
+  display: flex;
+  padding: 15px 50px;
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  color: #fff;
+  background-color: #2ac37d;
+  border: 1px solid transparent;
+  border-radius: 60px;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+.register .register_content .submit_btn button:hover {
+  color: #fff;
+  background-color: #50cf96;
+}/*# sourceMappingURL=register.css.map */
