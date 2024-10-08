@@ -42,7 +42,13 @@ $tablet-width: 992px;
 $desktop-width: 1200px;
 
 @mixin mobile {
-  @media (max-width: #{$mobile -width - 1px}) {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tab {
+  @media (min-width:#{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
     @content;
   }
 }
@@ -481,9 +487,40 @@ $desktop-width: 1200px;
         font-weight: 400;
       }
     }
+    .contact_map {
+      iframe {
+        @include desktop() {
+          width: 600px;
+          height: 450px;
+        }
+        @include tablet() {
+          width: 400px;
+          height: 300px;
+        }
+        @include tab {
+          width: 400px;
+          height: 350px;
+        }
+        @include mobile() {
+          width: 300px;
+          height: 200px;
+        }
+      }
+    }
     .contact_form {
       text-align: left;
       margin-left: 40px;
+      @include tablet() {
+        text-align: center;
+      }
+      @include tab() {
+        text-align: center;
+        margin: 30px 0;
+      }
+      @include mobile() {
+        margin: 30px 0;
+        text-align: center;
+      }
       input {
         border: 1px solid black;
         padding: 1em;
@@ -491,6 +528,9 @@ $desktop-width: 1200px;
         border-radius: 2px;
         margin-bottom: 20px;
         width: 325px;
+        @include mobile() {
+          width: 200px;
+        }
       }
       textarea {
         border: 1px solid black;
@@ -500,6 +540,9 @@ $desktop-width: 1200px;
         margin-bottom: 20px;
         width: 325px;
         height: 200px;
+        @include mobile() {
+          width: 200px;
+        }
       }
       button {
         border: 2px solid #2ac37d;
