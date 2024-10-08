@@ -28,10 +28,10 @@ function renderShoesData(arr) {
       <div class="card">
         <img class="card-img-top" src="${image}" alt="Title" />
         <div class="card-body px-0">
-            <p class="card-text  m-0 fw-bold text-uppercase">${name}</p>
-            <p class="card-text">Giá: $${price}</p>
+            <p class="card-text name  m-0 fw-bold text-uppercase">${name}</p>
+            <p class="card-text price">Giá: $${price}</p>
         </div>
-        <button class="btn bottom-0 start-50 translate-middle-x">Mua</button>
+        <button class="btn bottom-0 start-50 translate-middle-x"><a href="../detail/index.html?=${id}" class="text-decoration-none ">Mua</a></button>
         </div>
     </div>
               `;
