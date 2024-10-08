@@ -1,0 +1,120 @@
+.index li .nav-link {
+  transition: all 0.3s;
+  background-color: #f8f9fa !important;
+  color: black !important;
+  border-radius: 30px;
+  padding: 10px 15px !important;
+}
+.index li .nav-link:hover {
+  background-color: #2ac37d !important;
+  color: white !important;
+  border-radius: 30px;
+}
+.index header input {
+  background-color: #e8e8e8 !important;
+  padding: 20px 25px !important;
+  border-radius: 30px !important;
+}
+.index #product .col .card {
+  border: 1px solid white;
+  padding-bottom: 50px;
+}
+.index #product .col .card::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: calc(100% + 40px);
+  height: calc(100% + 50px);
+  border: 1px solid #000;
+  z-index: 1;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.8, 0.8);
+  transition: all 0.3s ease;
+}
+.index #product .col .card img {
+  background-color: #f5f5f5;
+}
+.index #product .col .card .card-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index #product .col .card .card-body p {
+  font-size: 13px;
+}
+.index #product .col .card .btn {
+  border: 2px solid #2ac37d;
+  padding: 7px 15px;
+  text-align: right;
+  position: absolute;
+  z-index: 10000;
+  bottom: 30px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.index #product .col .card .btn:hover {
+  background-color: #2ac37d !important;
+  color: white;
+}
+.index #product .col .card:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1, 1);
+}
+.index #product .col .card:hover .btn {
+  opacity: 1;
+  bottom: -10px;
+}
+.index #feedback {
+  background: url("https://nouthemes.net/html/trueshoes/images/background/parallax.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.index .contact {
+  margin: 80px 0;
+  text-align: center;
+}
+.index .contact .contact_title p {
+  margin: 30px 0;
+  font-size: 18px;
+  color: #888888;
+}
+.index .contact .contact_title h2 {
+  font-size: 60px;
+  font-weight: 400;
+}
+.index .contact .contact_form {
+  text-align: left;
+  margin-left: 40px;
+}
+.index .contact .contact_form input {
+  border: 1px solid black;
+  padding: 1em;
+  font-size: 16px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  width: 325px;
+}
+.index .contact .contact_form textarea {
+  border: 1px solid black;
+  padding: 1em;
+  font-size: 16px;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  width: 325px;
+  height: 200px;
+}
+.index .contact .contact_form button {
+  border: 2px solid #2ac37d;
+  padding: 7px 15px;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.index .contact .contact_form button:hover {
+  background-color: #2ac37d !important;
+  color: white;
+}/*# sourceMappingURL=index.css.map */
