@@ -2,18 +2,15 @@ document.getElementById("formReg").onsubmit = (e) => {
   e.preventDefault();
   const data = getValueForm();
   if (data) {
-    console.log(data);
     let promise = axios({
       url: "https://shop.cyberlearn.vn/api/Users/signup",
       method: "POST",
       data: data,
     })
       .then((res) => {
-        console.log(res);
         renderThongBao(res.data.message, "success");
       })
       .catch((err) => {
-        console.log(err);
         renderThongBao(err.response.data.message, "danger");
       });
   }
