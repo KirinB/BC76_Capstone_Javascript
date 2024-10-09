@@ -32,38 +32,40 @@ window.onload = function () {
       let resultRelated = ``;
       const arrRelated = data.content.relatedProducts;
       for (related of arrRelated) {
-        const { name, price, image } = related;
+        const { name, price, image, id } = related;
         resultRelated += `
         <div class="wrapper_shoe">
-            <div class="shoe_thumbnail">
-              <img class="img-fluid" src="${image}" alt="" />
-            </div>
-            <div class="shoe_content">
-              <div class="list_shoe">
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
+            <a href="./?id=${id}">
+              <div class="shoe_thumbnail">
+                <img class="img-fluid" src="${image}" alt="" />
+              </div>
+              <div class="shoe_content">
+                <div class="list_shoe">
+                  <div>
+                    <img class="img-fluid" src="./../src/1.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="img-fluid" src="./../src/2.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="img-fluid" src="./../src/3.jpg" alt="" />
+                  </div>
+                  <div>
+                    <img class="img-fluid" src="./../src/1.jpg" alt="" />
+                  </div>
                 </div>
-                <div>
-                  <img class="img-fluid" src="./../src/2.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/3.jpg" alt="" />
-                </div>
-                <div>
-                  <img class="img-fluid" src="./../src/1.jpg" alt="" />
+                <div class="d-flex w-100 justify-content-between">
+                  <div class="d-flex flex-column">
+                    <a href="#" class="text-uppercase">${name}</a>
+                    <p>Men shoes, Nike, Jordan</p>
+                  </div>
+  
+                  <div class="shoe_price">
+                    <span>£ ${price}</span>
+                  </div>
                 </div>
               </div>
-              <div class="d-flex w-100 justify-content-between">
-                <div class="d-flex flex-column">
-                  <a href="#" class="text-uppercase">${name}</a>
-                  <p>Men shoes, Nike, Jordan</p>
-                </div>
-
-                <div class="shoe_price">
-                  <span>£ ${price}</span>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
         `;
       }

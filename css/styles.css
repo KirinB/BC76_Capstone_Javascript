@@ -61,7 +61,7 @@ header .header_top .header_actions a:hover {
   background-color: #e5e5e5;
   color: #2ac37d;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   header .header_top .header_actions {
     float: unset;
     display: flex;
@@ -114,6 +114,11 @@ header .navigation .navigation_content .nav_center.show ul {
 header .navigation .navigation_content .nav_center {
   display: none;
   width: 50%;
+}
+@media (min-width: 1200px) {
+  header .navigation .navigation_content .nav_center .nav_close {
+    display: none;
+  }
 }
 header .navigation .navigation_content .nav_center ul {
   list-style: none;
@@ -248,6 +253,19 @@ header .navigation .navigation_content .nav_right .nav_toggle button i {
     display: none;
   }
 }
+header .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+header .overlay.show {
+  display: block;
+}
 header .header_services {
   background-color: #eee;
   height: 50px;
@@ -265,7 +283,7 @@ header .header_services .owl-carousel .carousel-item {
   justify-content: center;
   padding: 10px 0;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   header .header_services .owl-carousel .carousel-item {
     padding: 10px 60px;
     gap: 10px;
@@ -477,6 +495,12 @@ section.detail_main .detail_right .product_shopping {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  section.detail_main .detail_right .product_shopping {
+    justify-content: start;
+  }
 }
 section.detail_main .detail_right .product_shopping .btn_primary {
   padding: 15px 30px;
@@ -711,7 +735,7 @@ section.more_item .list_item {
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   section.more_item .list_item {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -739,6 +763,7 @@ section.more_item .list_item .wrapper_shoe::before {
   opacity: 0;
   transform: scale(0.8, 0.8);
   transition: all 0.3s ease;
+  z-index: -1;
 }
 section.more_item .list_item .wrapper_shoe:hover::before {
   visibility: visible;
@@ -867,7 +892,7 @@ footer {
   z-index: 0;
   text-align: center;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   footer {
     text-align: left;
   }
