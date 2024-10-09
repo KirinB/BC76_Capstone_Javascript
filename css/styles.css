@@ -253,6 +253,19 @@ header .navigation .navigation_content .nav_right .nav_toggle button i {
     display: none;
   }
 }
+header .overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+header .overlay.show {
+  display: block;
+}
 header .header_services {
   background-color: #eee;
   height: 50px;
@@ -482,6 +495,12 @@ section.detail_main .detail_right .product_shopping {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1200px) {
+  section.detail_main .detail_right .product_shopping {
+    justify-content: start;
+  }
 }
 section.detail_main .detail_right .product_shopping .btn_primary {
   padding: 15px 30px;
