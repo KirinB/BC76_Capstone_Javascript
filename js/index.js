@@ -8,7 +8,7 @@ function getShoesData() {
   //  thành công .then \\ thất bại .catch
   promise
     .then((res) => {
-      console.log(res.data);
+      // console.log(res.data);
       renderShoesData(res.data.content);
     })
     .catch((err) => {

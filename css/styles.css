@@ -61,7 +61,7 @@ header .header_top .header_actions a:hover {
   background-color: #e5e5e5;
   color: #2ac37d;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   header .header_top .header_actions {
     float: unset;
     display: flex;
@@ -114,6 +114,11 @@ header .navigation .navigation_content .nav_center.show ul {
 header .navigation .navigation_content .nav_center {
   display: none;
   width: 50%;
+}
+@media (min-width: 1200px) {
+  header .navigation .navigation_content .nav_center .nav_close {
+    display: none;
+  }
 }
 header .navigation .navigation_content .nav_center ul {
   list-style: none;
@@ -265,7 +270,7 @@ header .header_services .owl-carousel .carousel-item {
   justify-content: center;
   padding: 10px 0;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   header .header_services .owl-carousel .carousel-item {
     padding: 10px 60px;
     gap: 10px;
@@ -711,7 +716,7 @@ section.more_item .list_item {
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   section.more_item .list_item {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -739,6 +744,7 @@ section.more_item .list_item .wrapper_shoe::before {
   opacity: 0;
   transform: scale(0.8, 0.8);
   transition: all 0.3s ease;
+  z-index: -1;
 }
 section.more_item .list_item .wrapper_shoe:hover::before {
   visibility: visible;
@@ -867,7 +873,7 @@ footer {
   z-index: 0;
   text-align: center;
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 576px) and (max-width: 1199px) {
   footer {
     text-align: left;
   }

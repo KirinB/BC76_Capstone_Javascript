@@ -45,7 +45,7 @@ $desktop-width: 1200px;
 }
 
 @mixin tablet {
-  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width - 1px}) {
     @content;
   }
 }
@@ -172,6 +172,11 @@ header {
       .nav_center {
         display: none;
         width: 50%;
+        .nav_close {
+          @include desktop() {
+            display: none;
+          }
+        }
         ul {
           list-style: none;
           display: flex;
@@ -741,6 +746,7 @@ section.more_item {
         opacity: 0;
         transform: scale(0.8, 0.8);
         transition: all 0.3s ease;
+        z-index: -1;
       }
       &:hover::before {
         visibility: visible;
